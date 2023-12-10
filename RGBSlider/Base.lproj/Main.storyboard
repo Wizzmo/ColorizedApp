@@ -18,7 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="oeu-UV-c1r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ifz-LZ-JZF"/>
+                    <navigationItem key="navigationItem" id="ifz-LZ-JZF">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="svk-mw-MoL">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="sT4-MV-Se5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YqE-k3-w5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="RMA-aJ-UTV">
-                                <rect key="frame" x="16" y="60" width="343" height="301.5"/>
+                                <rect key="frame" x="16" y="40" width="343" height="301.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6S-wR-kgy">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="121.5"/>
@@ -191,6 +197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
