@@ -12,9 +12,9 @@ final class SettingsViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var colorPanelView: UIView!
     
-    @IBOutlet var redLabel: UILabel!
-    @IBOutlet var greenLabel: UILabel!
-    @IBOutlet var blueLabel: UILabel!
+    @IBOutlet var redColourIntensityLabel: UILabel!
+    @IBOutlet var greenColourIntensityLabel: UILabel!
+    @IBOutlet var blueColourIntensityLabel: UILabel!
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -40,7 +40,7 @@ final class SettingsViewController: UIViewController {
         colorPanelView.backgroundColor = viewColor
         
         setValue(for: redSlider, greenSlider, blueSlider)
-        setValue(for: redLabel, greenLabel, blueLabel)
+        setValue(for: redColourIntensityLabel, greenColourIntensityLabel, blueColourIntensityLabel)
         setValue(for: redTextField, greenTextField, blueTextField)
     }
     
@@ -53,13 +53,13 @@ final class SettingsViewController: UIViewController {
     @IBAction func rgbSlider(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            setValue(for: redLabel)
+            setValue(for: redColourIntensityLabel)
             setValue(for: redTextField)
         case greenSlider:
-            setValue(for: greenLabel)
+            setValue(for: greenColourIntensityLabel)
             setValue(for: greenTextField)
         default:
-            setValue(for: blueLabel)
+            setValue(for: blueColourIntensityLabel)
             setValue(for: blueTextField)
         }
         
@@ -69,22 +69,6 @@ final class SettingsViewController: UIViewController {
     @IBAction func doneButtonPressed() {
         delegate.setColor(colorPanelView.backgroundColor ?? .white)
         dismiss(animated: true)
-    }
-    
-    // MARK: - Private Methods
-    private func setupLabels() {
-        redLabel.text = String(round(redSlider.value  * 100) / 100)
-        greenLabel.text = String(round(greenSlider.value  * 100) / 100)
-        blueLabel.text = String(round(blueSlider.value  * 100) / 100)
-    }
-    
-    private func changeViewBackgroundColour() {
-        colorPanelView.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1.0
-        )
     }
 }
 
@@ -102,8 +86,8 @@ extension SettingsViewController {
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label {
-            case redLabel: label.text = string(from: redSlider)
-            case greenLabel: label.text = string(from: greenSlider)
+            case redColourIntensityLabel: label.text = string(from: redSlider)
+            case greenColourIntensityLabel: label.text = string(from: greenSlider)
             default: label.text = string(from: blueSlider)
             }
         }
@@ -167,12 +151,13 @@ extension SettingsViewController: UITextFieldDelegate {
         switch textField {
         case redTextField:
             redSlider.setValue(currentValue, animated: true)
-            setValue(for: redLabel)
+            setValue(for: redColourIntensityLabel)
         case greenTextField:
             greenSlider.setValue(currentValue, animated: true)
-            setValue(for: greenLabel)
+            setValue(for: greenColourIntensityLabel)
         default:
             blueSlider.setValue(currentValue, animated: true)
+            setValue(for: blueColourIntensityLabel)
         }
         
         setColor()

@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" id="ifz-LZ-JZF">
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="svk-mw-MoL">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="sT4-MV-Se5"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="sT4-MV-Se5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
