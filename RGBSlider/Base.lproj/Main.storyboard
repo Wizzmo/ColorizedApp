@@ -33,7 +33,7 @@
         <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="RGBSlider" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,10 +192,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueColourIntensityLabel" destination="BzZ-vM-HME" id="2iJ-CU-eM0"/>
+                        <outlet property="blueColourIntensityLabel" destination="BzZ-vM-HME" id="R6E-Qf-S0W"/>
                         <outlet property="blueSlider" destination="Nkd-Wt-LYr" id="5jH-fI-dLN"/>
                         <outlet property="blueTextField" destination="lP8-Ou-ExA" id="vZv-j7-FKQ"/>
-                        <outlet property="colourPanelView" destination="y6S-wR-kgy" id="YFQ-Iy-jGQ"/>
+                        <outlet property="colorPanelView" destination="y6S-wR-kgy" id="5qg-cN-39q"/>
                         <outlet property="greenColourIntensityLabel" destination="ewj-BC-uuL" id="eBu-b0-Qje"/>
                         <outlet property="greenSlider" destination="hzG-Zp-YPU" id="ya0-HP-ltW"/>
                         <outlet property="greenTextField" destination="6HL-7d-mCi" id="VPf-yy-yc8"/>

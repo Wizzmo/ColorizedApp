@@ -24,6 +24,4 @@ extension MainViewController: SettingsViewControllerDelegate {
     func setColor(_ color: UIColor) {
         view.backgroundColor = color
     }
-    
-    
 }
